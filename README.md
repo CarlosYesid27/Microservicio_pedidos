@@ -1,11 +1,10 @@
 # Microservicio de Pedidos
 
-API REST para gestión de pedidos construida con FastAPI y SQLite.
+ Gestión de pedidos construida con FastAPI y SQLite.
 
 ## Requisitos previos
 
 - [Python 3.8+](https://www.python.org/downloads/)
-- [Git](https://git-scm.com/)
 
 ## Instalación y ejecución
 
@@ -42,6 +41,5 @@ uvicorn main:app --reload
 **5. Abrir en el navegador**
 
 - Aplicación: http://localhost:8000
-- Documentación interactiva (Swagger): http://localhost:8000/docs
 
 > La base de datos SQLite se crea automáticamente al primer arranque.
