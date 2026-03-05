@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Pedidos</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Gestión de Pedidos</h1>
+
+    <!-- Formulario para crear pedido -->
+    <div class="form-card">
+      <h2>Nuevo Pedido</h2>
+      <form id="formPedido">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="id">ID Pedido</label>
+            <input type="number" id="id" placeholder="Ej: 001" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="id_usuario">ID Usuario</label>
+            <input type="number" id="id_usuario" placeholder="Ej: 002" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="id_producto">ID Producto</label>
+            <input type="number" id="id_producto" placeholder="Ej: 003" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" placeholder="Ej: 5" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="estado">Estado del Pedido</label>
+            <select id="estado" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="Entregado">Entregado</option>
+              <option value="Cancelado">Cancelado</option>
+            </select>
+          </div>    
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Agregar Pedido</button>
+          <button type="button" class="btn btn-secondary" id="btnLimpiar">Limpiar</button>
+        </div>
+      </form>
+    </div>
+
+
+    <div id="mensaje" class="mensaje oculto"></div>
+
+    <!-- Tabla de pedidos -->
+    <div class="table-card">
+      <div class="table-header">
+        <h2>Lista de Pedidos</h2>
+      </div>
+      <div class="table-wrapper">
+        <table id="tablaPedidos">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>ID Usuario</th>
+              <th>ID Producto</th>
+              <th>Cantidad</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+            <tr id="filaVacia">
+              <td colspan="6" class="empty-row">No hay pedidos registrados.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
